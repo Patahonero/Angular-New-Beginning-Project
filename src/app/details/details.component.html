@@ -1,0 +1,43 @@
+
+<div class="container">
+    <div class="row space-between">
+        <div class="w-49">
+
+                <img [src]="casaEscogida?.photo" alt="" class="photo">
+
+        </div>
+    
+        <div class="info w-49">
+            <p><span class="infoTitle">Details of id: </span>{{casaEscogida?.id}}</p>
+            <p><span class="infoTitle">Nombre: </span>{{casaEscogida?.name}}</p>
+            <p><span class="infoTitle">City:</span> {{casaEscogida?.city}}</p>
+            <p><span class="infoTitle">State:</span> {{casaEscogida?.state}}</p>
+
+            <!-- Hago por ejemplo un  -->
+            <p><span class="infoTitle">Laundry:</span> {{(casaEscogida?.laundry ? 'Yes': 'No')}}</p>
+            <p><span class="infoTitle">Wifi:</span> {{(casaEscogida?.wifi ? 'Yes': 'No')}}</p>
+            <!-- Le hacemos group form porque tenemos declarada así su estructura en el ts -->
+            <form action="" [formGroup]="applyForm" (ngSubmit)="submitAplication()">
+               <div>
+                 <label for="nombre">Nombre</label>
+                 <input type="text"  name="nombre" id="" formControlName="nombre">
+               </div>
+               <div>
+                 <label for="apellido">Apellidos</label>
+                 <input type="text"  name="apellido" id="" formControlName="apellido">
+               </div>
+              <div>
+                 <label for="email">Email</label>
+                  <input type="text"  name="email" id="" formControlName="email">
+              </div>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+ 
+        
+
+    </div>
+    
+
+</div>

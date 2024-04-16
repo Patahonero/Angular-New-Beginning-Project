@@ -1,0 +1,10 @@
+<section class="card">
+    <img class="listing-photo" [src]=housingLocation.photo alt="Exterior photo of {{housingLocation.name}}">
+    <h2 class="listing-heading">{{ housingLocation.name}}</h2>
+    <p class="listing-location">{{ housingLocation.city}},{{housingLocation.state}},</p>
+    <!-- Ahora vamos a añadir aquí un link que navega a los detalles de cada casa -->
+    <!-- <a routerLink="/details/{{housingLocation.id}}" routerLinkActive="active" href="" >Learn More</a> -->
+    <span (click)="routeToDetails(housingLocation)" class="listing-link">Learn More</span>
+    <!-- Aquí lo que ha dicho Iván es que es mejor hacer un onclick en el span 
+    Es una función en el housing-location-components que nos llevará a nuestro destino,al cual le pasamos el id-->
+</section>

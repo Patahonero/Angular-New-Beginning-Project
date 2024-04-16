@@ -1,0 +1,20 @@
+
+*{
+  box-sizing: border-box;
+}
+.row{
+  display: flex;
+}
+.w-49{
+  width: 49%;
+}
+.photo{
+  width: 100%;
+  max-height:100vh;
+}
+.infoTitle{
+  font-weight: bold;
+}
+.space-between{justify-content: space-between;}
+p{margin-bottom: 20px;
+font-size: 40px;}
